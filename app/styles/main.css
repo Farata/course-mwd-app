@@ -1,5 +1,7 @@
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+/* Add custom styles here */
+.breadcrumb {
+  margin-bottom: 0;
+}
+button.close {
+  margin-top: 7px;
 }

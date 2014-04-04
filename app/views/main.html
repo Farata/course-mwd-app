@@ -1,35 +1,54 @@
-<div class="header">
-  <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
-  </ul>
-  <h3 class="text-muted">app</h3>
+<div class="row">
+    <!-- Featured Products Slider -->
+
+    <div id="featured-product-carousel" class="carousel slide" data-pause="hover" data-wrap="true" data-interval="3000">
+        <ol class="carousel-indicators">
+            <li data-target="#featured-product-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#featured-product-carousel" data-slide-to="1" class=""></li>
+            <li data-target="#featured-product-carousel" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="images/promo-product-1.jpg" alt="ABC Auction Deals" class="img-responsive center-block">
+            </div>
+            <div class="item">
+                <img src="images/promo-product-2.jpg" alt="ABC Auction Deals" class="img-responsive center-block">
+            </div>
+            <div class="item">
+                <img src="images/promo-product-3.jpg" alt="ABC Auction Deals" class="img-responsive center-block">
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="javascript:$('.carousel').carousel('prev');">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="javascript:$('.carousel').carousel('next');">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+
+    <!-- / Featured Products Slider -->
 </div>
 
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
+<!-- Current App's Heading -->
+<h2 class="well well-sm" id="app-heading">
+  Featured Products
+</h2>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
-
-<div class="footer">
-  <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+<div class="row">
+    <!-- Featured Products – list container   -->
+    <ul class="list-unstyled" id="items-list">
+      <li class="col-md-4" ng-repeat="product in model.featuredProducts">
+          <div class="row">
+            <div class="col-xs-4">
+              <a ng-href="#/product/{{ product.id }}"><img ng-src="images/{{ product.thumb }}" alt="" class="img-responsive"></a>
+            </div>
+            <div class="product-description-holder col-xs-8">
+              <h2><a ng-href="#/product/{{ product.id }}">{{ product.title }}</a></h2>
+              <p>{{ product.description }}</p>
+            </div>
+          </div>
+      </li>
+    </ul>
 </div>
