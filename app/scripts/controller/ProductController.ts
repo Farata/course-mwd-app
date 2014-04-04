@@ -10,6 +10,11 @@ module auction.controller {
     model: ProductController;
   }
 
+  export class SearchForm {
+    lowPrice:  number = 0;
+    highPrice: number = 100;
+  }
+
   export class ProductController {
     static $inject = [
       '$scope',
@@ -17,6 +22,7 @@ module auction.controller {
     ];
 
     public isSearchFormVisible = false;
+    public searchForm = new SearchForm();
 
     constructor(private $scope: IProductScope,
                 public product: m.ProductModel) {

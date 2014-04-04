@@ -5,3 +5,6 @@
 button.close {
   margin-top: 7px;
 }
+.slider.slider-horizontal {
+  width: 100%;
+}
