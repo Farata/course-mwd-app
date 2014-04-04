@@ -39,7 +39,7 @@
 <div class="row">
     <!-- Featured Products – list container   -->
     <ul class="list-unstyled" id="items-list">
-      <li class="col-md-4" ng-repeat="product in model.featuredProducts">
+      <li class="col-md-4" ng-repeat="product in ctrl.featuredProducts">
           <div class="row">
             <div class="col-xs-4">
               <a ng-href="#/product/{{ product.id }}"><img ng-src="images/{{ product.thumb }}" alt="" class="img-responsive"></a>

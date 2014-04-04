@@ -8,11 +8,11 @@
   </div>
 
   <div class="col-xs-12 col-sm-2">
-    <button ng-hide="model.isSearchFormVisible" ng-click="model.isSearchFormVisible = true"  class="btn btn-default btn-block">Find more</button>
-    <button ng-show="model.isSearchFormVisible" ng-click="model.isSearchFormVisible = false" class="close" aria-hidden="true">&times;</button>
+    <button ng-hide="ctrl.isSearchFormVisible" ng-click="ctrl.isSearchFormVisible = true"  class="btn btn-default btn-block">Find more</button>
+    <button ng-show="ctrl.isSearchFormVisible" ng-click="ctrl.isSearchFormVisible = false" class="close" aria-hidden="true">&times;</button>
   </div>
 
-  <auction-search-form ng-show="model.isSearchFormVisible"></auction-search-form>
+  <auction-search-form ng-show="ctrl.isSearchFormVisible"></auction-search-form>
 </div>
 
 <br/>

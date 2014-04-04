@@ -1,13 +1,13 @@
 <div>
-  <h1>{{ model.product.title }}</h1>
+  <h1>{{ ctrl.product.title }}</h1>
   <p>
     Seller: <b>starmotors</b> (135) 100% Positive feedback
   </p>
 </div>
 
 <div class="col-sm-12 col-md-9">
-  <h4><b>Current Price</b>: {{ model.product.price | currency }} [5&nbsp;bids]</h4>
-  <p><b>Time left</b>: {{ model.product.timeleft }}h (Today 15.23)</p>
+  <h4><b>Current Price</b>: {{ ctrl.product.price | currency }} [5&nbsp;bids]</h4>
+  <p><b>Time left</b>: {{ ctrl.product.timeleft }}h (Today 15.23)</p>
 </div>
 
 <div class="col-sm-12 col-md-3">
@@ -21,4 +21,4 @@
   </form>
 </div>
 
-<div class="col-xs-12"><b>Item's description</b>:  {{ model.product.description }}</div>
+<div class="col-xs-12"><b>Item's description</b>:  {{ ctrl.product.description }}</div>
