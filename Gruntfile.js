@@ -58,6 +58,10 @@ module.exports = function (grunt) {
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
+      },
+      ts: {
+        files: ['<%= yeoman.app %>/scripts/{,*/}*.ts'],
+        tasks: ['ts']
       }
     },
 
@@ -287,15 +291,18 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
-        'copy:styles'
+        'copy:styles',
+        'ts'
       ],
       test: [
-        'copy:styles'
+        'copy:styles',
+        'ts'
       ],
       dist: [
         'copy:styles',
         'imagemin',
-        'svgmin'
+        'svgmin',
+        'ts'
       ]
     },
 
@@ -304,6 +311,20 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'karma.conf.js',
         singleRun: true
+      }
+    },
+
+    ts: {
+      options: {
+        module: 'amd',
+        target: 'es5',
+        sourcemap: true,
+        sourceRoot: '/scripts'
+      },
+      dist: {
+        src: ['<%= yeoman.app %>/scripts/{,*/}*.ts'],
+        reference: '<%= yeoman.app %>/scripts/refs.ts',
+        outDir: '.tmp/scripts'
       }
     }
   });

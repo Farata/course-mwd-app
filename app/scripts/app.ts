@@ -1,3 +1,4 @@
+/// <reference path="refs.ts" />
 'use strict';
 
 angular.module('auction', ['ngRoute'])

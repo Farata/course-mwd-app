@@ -1,5 +1,6 @@
 // Karma configuration
 // http://karma-runner.github.io/0.10/config/configuration-file.html
+'use strict';
 
 module.exports = function(config) {
   config.set({
@@ -17,7 +18,9 @@ module.exports = function(config) {
       'app/scripts/*.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
-      'test/spec/**/*.js'
+      'test/spec/**/*.js',
+      '.tmp/scripts/*.js',
+      '.tmp/scripts/**/*.js',
     ],
 
     // list of files / patterns to exclude

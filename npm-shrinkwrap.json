@@ -1725,6 +1725,53 @@
         }
       }
     },
+    "grunt-ts": {
+      "version": "1.10.0",
+      "from": "grunt-ts@^1.10.0",
+      "dependencies": {
+        "typescript": {
+          "version": "0.9.5",
+          "from": "typescript@0.9.5"
+        },
+        "chokidar": {
+          "version": "0.8.2",
+          "from": "chokidar@0.8.2",
+          "dependencies": {
+            "fsevents": {
+              "version": "0.2.0",
+              "from": "fsevents@0.2.0",
+              "dependencies": {
+                "nan": {
+                  "version": "0.8.0",
+                  "from": "nan@~0.8.0"
+                }
+              }
+            },
+            "recursive-readdir": {
+              "version": "0.0.2",
+              "from": "recursive-readdir@0.0.2"
+            }
+          }
+        },
+        "underscore": {
+          "version": "1.5.1",
+          "from": "underscore@1.5.1"
+        },
+        "underscore.string": {
+          "version": "2.3.3",
+          "from": "underscore.string@2.3.3"
+        },
+        "es6-promise": {
+          "version": "0.1.1",
+          "from": "es6-promise@~0.1.1"
+        },
+        "rimraf": {
+          "version": "2.2.6",
+          "from": "rimraf@2.2.6",
+          "resolved": "https://registry.npmjs.org/rimraf/-/rimraf-2.2.6.tgz"
+        }
+      }
+    },
     "grunt-usemin": {
       "version": "2.1.0",
       "from": "grunt-usemin@^2.1.0",
@@ -2339,6 +2386,10 @@
           "resolved": "https://registry.npmjs.org/pretty-ms/-/pretty-ms-0.1.0.tgz"
         }
       }
+    },
+    "typescript": {
+      "version": "1.0.0",
+      "from": "typescript@^1.0.0"
     }
   }
 }
