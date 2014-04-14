@@ -1,9 +1,10 @@
-<div>
+<form name="searchForm" novalidate>
   <div class="col-xs-12 col-md-4">
     <div class="row form-group">
       <div class="col-xs-12 col-sm-6 col-md-12">
         <label class="control-label">Product</label>
-        <input type="text" class="form-control" placeholder="Product title">
+        <input ng-model="ctrl.formData.title" ng-minlength="3" type="text" class="form-control" placeholder="Product title">
+        <span class="error-message" ng-show="searchForm.title.$invalid">Error</span>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-12">
         <label class="control-label">&nbsp;</label>
@@ -19,8 +20,8 @@
   <div class="col-xs-12 col-md-8">
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        <auction-price-range low-price="ctrl.searchForm.lowPrice"
-                             high-price="ctrl.searchForm.highPrice">
+        <auction-price-range low-price="ctrl.formData.lowPrice"
+                             high-price="ctrl.formData.highPrice">
         </auction-price-range>
       </div>
       <div class="col-xs-12 col-sm-6">
@@ -39,10 +40,10 @@
             <form class="form-horizontal" role="form">
               <div class="form-group">
                 <div class="col-xs-8">
-                  <label class="control-label">Number of Bids</label>
+                  <label class="control-label">Min number of Bids</label>
                 </div>
                 <div class="col-xs-4">
-                  <input type="number" class="form-control" value="3">
+                  <input ng-model="ctrl.formData.bidsCount" type="number" class="form-control">
                 </div>
               </div>
             </form>
@@ -53,6 +54,6 @@
   </div>
   <div class="col-xs-12 col-md-4 col-md-offset-4">
     <br>
-    <button class="btn btn-default btn-block btn-primary">Find more</button>
+    <button ng-click="ctrl.search()" class="btn btn-default btn-block btn-primary">Find more</button>
   </div>
-</div>
+</form>

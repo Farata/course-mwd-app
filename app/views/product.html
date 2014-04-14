@@ -12,7 +12,9 @@
     <button ng-show="ctrl.isSearchFormVisible" ng-click="ctrl.isSearchFormVisible = false" class="close" aria-hidden="true">&times;</button>
   </div>
 
-  <auction-search-form ng-show="ctrl.isSearchFormVisible"></auction-search-form>
+  <div ng-show="ctrl.isSearchFormVisible">
+    <auction-search-form ng-controller="SearchFormController as ctrl"></auction-search-form>
+  </div>
 </div>
 
 <br/>

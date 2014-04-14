@@ -1,3 +1,7 @@
+<div class="row well">
+  <auction-search-form ng-controller="SearchFormController as ctrl"></auction-search-form>
+</div>
+
 <!-- Current App's Heading -->
 <h2 class="well well-sm" id="app-heading">
   Search Results
@@ -19,8 +23,8 @@
         <br/>
         <div class="row">
           <div class="col-xs-4 text-center">
-            <span class="badge">{{ product.timeleft }} hour left</span><br/>
-            <small>Today 15.00</small>
+            <span class="badge">{{ product.auctionEndTime | date:'shortDate' }}</span><br/>
+            <small>{{ product.auctionEndTime | fromNow }}</small>
           </div>
           <div class="col-xs-4 text-center">
             <span class="badge">
@@ -31,7 +35,7 @@
           </div>
           <div class="col-xs-4 text-center">
             <span class="badge">
-              {{ product.price | currency }}
+              {{ product.minimalPrice | currency }}
             </span>
             <br/>
             <small>Current price</small>

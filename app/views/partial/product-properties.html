@@ -6,8 +6,10 @@
 </div>
 
 <div class="col-sm-12 col-md-9">
-  <h4><b>Current Price</b>: {{ ctrl.product.price | currency }} [5&nbsp;bids]</h4>
-  <p><b>Time left</b>: {{ ctrl.product.timeleft }}h (Today 15.23)</p>
+  <p><b>Max Bid</b>: {{ ctrl.product.minimalPrice | currency }}</p>
+  <p><b>Reserved Price</b>: {{ ctrl.product.reservedPrice | currency }}</p>
+  <p><b>Quantity</b>: {{ ctrl.product.quantity }}</p>
+  <p><b>Time left</b>: {{ ctrl.product.auctionEndTime | fromNow }}</p>
 </div>
 
 <div class="col-sm-12 col-md-3">
@@ -16,7 +18,7 @@
       <input type="text" class="form-control" value="">
     </div>
     <div class="form-group">
-      <button class="btn btn-default btn-block btn-primary">Place bid</button>
+      <button ng-click="ctrl.placeBid()" class="btn btn-default btn-block btn-primary">Place bid</button>
     </div>
   </form>
 </div>

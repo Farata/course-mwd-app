@@ -2,58 +2,70 @@
   "heading" : "Search results",
   "items"   : [
     {
-      "id"          : 1,
-      "title"       : "Unit 1",
-      "thumb"       : "01-1.jpg",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit. Ut enim.",
-      "timeleft"    : 2,
-      "watchers"    : 12,
-      "price"       : 123
+      "id"            : 1,
+      "title"         : "Item 1",
+      "thumb"         : "01-1.jpg",
+      "description"   : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit. Ut enim.",
+      "auctionEndTime": "2014-04-21T16:55:03+00:00",
+      "watchers"      : 12,
+      "quantity"      : 15,
+      "minimalPrice"  : 123,
+      "reservedPrice" : 300
     },
     {
-      "id"          : 2,
-      "title"       : "Unit 2",
-      "thumb"       : "01-2.jpg",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit. Ut enim.",
-      "timeleft"    : 2,
-      "watchers"    : 3,
-      "price"       : 43
+      "id"            : 2,
+      "title"         : "Item 2",
+      "thumb"         : "01-2.jpg",
+      "description"   : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit. Ut enim.",
+      "auctionEndTime": "2014-04-23T16:55:03+00:00",
+      "watchers"      : 1,
+      "quantity"      : 1,
+      "minimalPrice"  : 5,
+      "reservedPrice" : 50
     },
     {
-      "id"          : 3,
-      "title"       : "Unit 3",
-      "thumb"       : "01-3.jpg",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit. Ut enim.",
-      "timeleft"    : 2,
-      "watchers"    : 12,
-      "price"       : 39
+      "id"            : 3,
+      "title"         : "Item 3",
+      "thumb"         : "01-3.jpg",
+      "description"   : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit. Ut enim.",
+      "auctionEndTime": "2014-04-19T16:55:03+00:00",
+      "watchers"      : 90,
+      "quantity"      : 2,
+      "minimalPrice"  : 15,
+      "reservedPrice" : 150
     },
     {
-      "id"          : 4,
-      "title"       : "Unit 4",
-      "thumb"       : "01-4.jpg",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit. Ut enim.",
-      "timeleft"    : 2,
-      "watchers"    : 12,
-      "price"       : 72
+      "id"            : 4,
+      "title"         : "Item 4",
+      "thumb"         : "01-4.jpg",
+      "description"   : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit. Ut enim.",
+      "auctionEndTime": "2014-04-18T16:55:03+00:00",
+      "watchers"      : 4,
+      "quantity"      : 1,
+      "minimalPrice"  : 80,
+      "reservedPrice" : 185
     },
     {
-      "id"          : 5,
-      "title"       : "Unit 5",
-      "thumb"       : "01-5.jpg",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit. Ut enim.",
-      "timeleft"    : 2,
-      "watchers"    : 12,
-      "price"       : 84
+      "id"            : 5,
+      "title"         : "Item 5",
+      "thumb"         : "01-5.jpg",
+      "description"   : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit. Ut enim.",
+      "auctionEndTime": "2014-04-19T16:55:03+00:00",
+      "watchers"      : 9,
+      "quantity"      : 8,
+      "minimalPrice"  : 34,
+      "reservedPrice" : 270
     },
     {
-      "id"          : 6,
-      "title"       : "Unit 6",
-      "thumb"       : "01-6.jpg",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit. Ut enim.",
-      "timeleft"    : 2,
-      "watchers"    : 12,
-      "price"       : 99
+      "id"            : 6,
+      "title"         : "Item 6",
+      "thumb"         : "01-6.jpg",
+      "description"   : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit. Ut enim.",
+      "auctionEndTime": "2014-04-22T16:55:03+00:00",
+      "watchers"      : 3,
+      "quantity"      : 7,
+      "minimalPrice"  : 50,
+      "reservedPrice" : 250
     }
   ]
 }

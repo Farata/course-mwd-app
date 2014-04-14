@@ -5,3 +5,4 @@ dist
 app/bower_components
 .baseDir.ts
 .tscache/
+.idea/

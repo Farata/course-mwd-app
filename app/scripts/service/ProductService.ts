@@ -10,14 +10,14 @@ module auction.service {
   export interface IProductService {
     getFeatured(): ng.IPromise<m.ProductModel[]>;
     getById(id: number): ng.IPromise<m.ProductModel>;
-    search(): ng.IPromise<m.ProductModel[]>;
+    search(params?): ng.IPromise<m.ProductModel[]>;
   }
 
   // Actual implementation of IProductService.
   class ProductService implements IProductService {
     // Specified what dependencies Angular should inject into this service.
     // Constructor parameters must follow in the same order.
-    static $inject = ['$http', '$log', '$q'];
+    static $inject = ['$http', '$log', 'Restangular'];
 
     private static ERROR_MSG_FEATURED =
       "Can't get static JSON file with the list of featured products." +
@@ -31,7 +31,7 @@ module auction.service {
     // DefinitelyTyped library.
     constructor(private $http: ng.IHttpService,
                 private $log: ng.ILogService,
-                private $q: ng.IQService) {}
+                private restangular: Restangular) {}
 
     /**
      * Returns the list of featured products.
@@ -47,10 +47,12 @@ module auction.service {
      * Searches for products with specified criteria.
      * @returns List of found products.
      */
-    search(): ng.IPromise<m.ProductModel[]> {
-      return this.$http.get('data/search.json').then(
-        (resp) => <m.ProductModel[]>resp.data.items,
-        () => this.$log.error(ProductService.ERROR_MSG_SEARCH));
+    search(params?): ng.IPromise<m.ProductModel[]> {
+      return params ?
+          this.restangular.all('products').getList(params) :
+          this.$http.get('data/search.json').then(
+              (resp) => <m.ProductModel[]>resp.data.items,
+              () => this.$log.error(ProductService.ERROR_MSG_SEARCH));
     }
 
     /**

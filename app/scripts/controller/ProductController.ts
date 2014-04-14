@@ -6,18 +6,38 @@ module auction.controller {
   import m = auction.model;
   import s = auction.service;
 
-  export class SearchForm {
-    lowPrice:  number = 0;
-    highPrice: number = 100;
-  }
-
   export class ProductController {
-    static $inject = ['product'];
+    static $inject = [
+      'product',
+      '$scope',
+      'Restangular',
+      'BidService'];
 
-    public isSearchFormVisible = false;
-    public searchForm = new SearchForm();
+    isSearchFormVisible = false;
+    bid: any;
 
-    constructor(public product: m.ProductModel) {}
+    constructor(public product: m.ProductModel,
+                private $scope: ng.IScope,
+                private restangular: Restangular,
+                private bidService: s.IBidService) {
+      // Updates product info as soon as WS reply message arrives.
+      var onBid = (p) => $scope.$apply(() => this.product = p);
+      // Start listening to incoming WS messages
+      bidService.watchBid(onBid);
+      // Remove subscription when the controller is destroyed.
+      $scope.$on('$destroy', () => bidService.unwatchBid(onBid));
+    }
+
+    placeBid() {
+      var bidModel = new model.BidModel();
+      bidModel.desiredQuantity = 1;
+
+      // Uncomment to communicate with RESTful Bid endpoint.
+      //this.restangular.all('bid').post(bidModel).then(
+      //    (resp) => this.product = resp);
+
+      this.bidService.placeBid(bidModel);
+    }
 
     public static resolve = {
       product: ['$route', 'ProductService',
