@@ -18,7 +18,7 @@ module auction.controller {
 
     constructor(public product: m.ProductModel,
                 private $scope: ng.IScope,
-                private restangular: Restangular,
+                private restangular: restangular.IService,
                 private bidService: s.IBidService) {
       // Updates product info as soon as WS reply message arrives.
       var onBid = (p) => $scope.$apply(() => this.product = p);
