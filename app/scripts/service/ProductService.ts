@@ -31,7 +31,7 @@ module auction.service {
     // DefinitelyTyped library.
     constructor(private $http: ng.IHttpService,
                 private $log: ng.ILogService,
-                private restangular: Restangular) {}
+                private restangular: restangular.IService) {}
 
     /**
      * Returns the list of featured products.
